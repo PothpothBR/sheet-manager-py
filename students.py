@@ -31,11 +31,10 @@ class Students:
         self.NAF = list()
         for i in range(len(self.names)):
             self.NAF.append(0)
-            self.situations.append(self.student_situation(i+1))
+            self.situations.append(self.__student_situation__(i))
 
-    # return the student semester situation, id starts in 1 not 0
-    def student_situation(self, id: int) -> str:
-        id -= 1
+    # return the student semester situation
+    def __student_situation__(self, id: int) -> str:
 
         # error catch
         if id < 0 or id > len(self.names):
