@@ -1,9 +1,23 @@
+# created: 01/10/2021 by Bruno Dalagnol
+# use: manage tables in google drive
+# last change: 01/10/2021 by Bruno Dalagnol
+# modifies in last change:
+#     + create all structure
+
 # Google Sheets open API
 # Reference: https://docs.gspread.org/en/latest/user-guide.html
 import gspread
+
+# project libraries
 from io_format import *
 from students import Students
 
+# system libraries
+from os import chdir
+from sys import argv
+
+# set the run directory to the main path
+chdir(argv[0][0:-8])
 
 # login API on drive service and get the table for edit
 # how can not use with, insert in try statement
